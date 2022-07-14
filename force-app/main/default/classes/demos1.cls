@@ -5,5 +5,6 @@ public class demos1 {
         con.LastName = ' TestIt';
         conlist.add(con);
         insert conlist ;
+        System.debug('Just debug');
     }
 }
