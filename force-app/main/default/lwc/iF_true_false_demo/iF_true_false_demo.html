@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="If True False Demo" class="slds-icon slds-icon_small">
+        <lightning-button variant="Brand" label={buttonlebel} onclick={butttonhandler}></lightning-button>
+    </lightning-card>
+
+    <template if:true={conditiontoshowtemplate} >
+        <lightning-card title="After True It Will Show" class="slds-icon slds-icon_small">
+        {Anytitle}
+        </lightning-card>
+    </template> 
+
+</template>

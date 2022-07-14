@@ -1,0 +1,24 @@
+<template>
+    <template if:true={afterbuttonclick}>
+            <lightning-card title="If Else and For Each Example">
+
+                    <lightning-button variant="success" label="See Account Detail" title="Successful action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+            
+            </lightning-card>
+    </template>
+    <template if:false={afterbuttonclick}>
+            <lightning-card title="If Else and For Each Example">
+                    <ul class="slds-m-around_medium">
+                        <template for:each={Accountinfo} for:item="acc">
+                           
+                            <li key={acc.id}>
+                                <div  class="lgc-bg"></div>
+                                Account Number = {acc.accountno}, Ifsc Code = {acc.ifsccode}
+                                <div  class="inverse-bg"></div>  
+                            </li>
+                                        
+                        </template>
+                    </ul>  
+            </lightning-card>
+    </template>
+</template>

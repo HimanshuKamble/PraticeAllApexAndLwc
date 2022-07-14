@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Data Table With Row Selection">
+        <lightning-button variant="Brand"
+                            label={buttonlable}
+                            onclick={handleonclick}>
+        </lightning-button>
+    </lightning-card>
+
+        <!-- Hide/Show DataTable -->
+    <template if:true={isvisible}>
+        <lightning-card title="Lwc DataTable" style="height: 300px">
+
+        <!-- Input Box For Search  Functionality Input -->
+            <lightning-input type="search"
+                            onchange={handlechanged}
+                            label="Search"
+                            value={searchkey} >
+            </lightning-input>
+            
+        <!-- DataTable Section Start Here -->
+            <lightning-datatable data={data}
+                                columns={columns}
+                                key-field="Id"
+                                onrowselection={getselectedrow} >
+            </lightning-datatable>
+
+        </lightning-card>
+    </template>
+
+</template>

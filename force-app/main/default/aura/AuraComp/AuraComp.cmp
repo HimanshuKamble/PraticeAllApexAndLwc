@@ -1,0 +1,36 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<p>Hello Aura Component</p>
+    <aura:attribute name="Day" type="string" default="Anyday"/>
+    <aura:attribute name="newacc" type="Account" Default="{'sobject':'Account','Name':'AccountNumber1'}"/> 
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <h1>
+        Today is : {!v.Day}  //handle after rendering page activate hota hai or controller value provide krta hai.
+        <hr/>
+        Account Attribute value = {!v.newacc.Name}
+    </h1>
+    <hr/>
+     <aura:attribute name="arrayattributr" type="string[]" 
+                     default="{'V1','V2','V3'}"/>
+     <aura:attribute name="listdemo" type="List"
+                    default="['List1','List2','List3']"/> 
+     <aura:attribute name="setdemo" type="Set" 
+                     default="['set1','set2','set3']"/> 
+    <aura:attribute name="mapdemo" type="Map" 
+                     default="{a:'map1',b:'map2',c:'map3'}"/> 
+    <aura:attribute name="jsObject" type="object"/>
+    <aura:attribute name='userdata' type='LCDemoWrapper.WrapperTest'/>
+    <h1>ArrayAttribute VAlue:- {!v.arrayattributr[0]} , {!v.arrayattributr[1]}
+        <hr/>
+        List Attribute Demo : {!v.listdemo[1]}
+        <hr/>
+        Set Attribute Demo : {!v.setdemo[1]}
+        <hr/>
+        Map Attribute Demo : {!v.mapdemo.b} 
+        <hr/>
+        Length of List Demo : {!v.listdemo.length}
+        <hr/>
+        Value In Js-Object : Name={!v.jsObject.Name} -- Email={!v.jsObject.Email}
+        <hr/>
+        Wrapper Class Values : {!v.userdata.mystring1}  -- {!v.userdata.myinteger1}
+    </h1>
+</aura:component>

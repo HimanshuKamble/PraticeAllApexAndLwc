@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="For Each Example By Noob">
+        
+        <template if:true={conlist.data}>  
+            <!-- // we check data available in conlist  -->
+            <template for:each={conlist.data} for:item="contactget">  
+                <!-- // itrate those data one by one -->
+                <h3 key ={contactget.Id}>{contactget.Name}</h3>
+            </template>
+        </template>
+        
+        <template if:true={conlist.error}>
+        <!-- // IF any Occure While Fatching record from org we get error and those catch by this template. -->
+            {conlist.error}
+        </template>
+
+    </lightning-card>
+</template>

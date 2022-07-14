@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:attribute name="childvar" type="string"/>
+    <br/>
+        <aura:handler name="customthandler" value="{!v.childvar}" action="{!c.activecustomhandler}" />
+    <br></br>
+    Value Of Child Attribute : {!v.childvar}
+    <br/><br/>
+    <lightning:button label=" Click Me to Update Child Variable" onclick="{!c.handleonclickchild}"/>
+</aura:component>

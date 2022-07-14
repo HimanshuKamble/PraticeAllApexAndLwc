@@ -1,0 +1,11 @@
+<template>
+    <lightning-card  title="Hello For Each Practice 1">
+        <ul class="slds-m-around_small" >
+        <template for:each={contacts} for:item="contact">
+            <li key={contact.id}>
+               Name: {contact.Name} , Age:{contact.age}
+            </li>
+        </template>
+        </ul>
+        </lightning-card>
+</template>

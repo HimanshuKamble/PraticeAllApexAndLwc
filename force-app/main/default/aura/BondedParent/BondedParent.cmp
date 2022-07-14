@@ -1,0 +1,11 @@
+<aura:component >
+	 <aura:attribute name="parentvar" type="String" default="This Value is default we can set in Parent Attribute" />
+    <br/>
+    <c:BondedChild childvar="{!v.parentvar}"/>
+    <hr/>
+    Value of Parent Attribute :{!v.parentvar}
+    <br/><br/>
+    <lightning:button label="Update Parent Attribute Value After Click" onclick="{!c.handleunbondedparent}"/>
+    <br/>
+    <aura:handler name="aurahandlerautomaticparent" value="{!v.parentvar}" action="{!c.afterchldvarchngehandlerparent}"/>  
+</aura:component>

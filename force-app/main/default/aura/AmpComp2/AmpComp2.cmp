@@ -1,0 +1,22 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    <aura:attribute name="fname" type="string"/>
+    <hr/>
+    <aura:attribute name="status" type="string"/>
+    <hr/>
+    <aura:Attribute name="NGO" type="string"/>
+    Hello :{!v.fname}
+    <br/>
+    How Are You : {!v.status}
+    <br/>
+    NGO Name : {!v.NGO}
+    <br/>
+    <lightning:button label="fnameButton" onclick="{!c.handleonclick}"/>  //Activate when button get click
+    <br/>
+    <lightning:button label="StatusButton" onclick="{!c.statushandleonclick}"/> //Activate when button get click
+    //aura Handller Activate automatic then page render // sab se pahile ye hi hota hai activate
+    <aura:handler name='init' value="{!this}" action="{!c.doInit}"/>
+    <br/>
+     <lightning:button label="NGOButton-NonProfit" onclick="{!c.handleonclickNGO}"/>
+    <lightning:button label="NGOButton-withNonProfit" onclick="{!c.handleonclickNGO}"/>
+</aura:component>

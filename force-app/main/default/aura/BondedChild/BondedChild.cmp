@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:attribute name="childvar" type="String" />
+    <br/>
+    Value of Child Attribute :{!v.childvar}
+    <br/>
+    <aura:handler name="aurahandlerautomatic" value="{!v.childvar}" action="{!c.afterchldvarchngehandler}"/>
+    <br/><br/>
+    <lightning:button label="Update Child Attribute Value After Click" onclick="{!c.handleunbondedchild}"/>
+</aura:component>
