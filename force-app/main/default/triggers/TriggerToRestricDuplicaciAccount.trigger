@@ -1,4 +1,6 @@
-trigger TriggerToRestricDuplicaciAccount on Account (before insert,after insert, before update) {
+trigger TriggerToRestricDuplicaciAccount on Account
+ (before insert,after insert, before update, before Delete ) {
+
 // we have class of name 'AccountRecordRestrictClass'.//
     if(trigger.isbefore && trigger.isinsert){
         AccountRecordRestrictClass.methodBeforeInsertRecord(trigger.new);
@@ -9,5 +11,10 @@ trigger TriggerToRestricDuplicaciAccount on Account (before insert,after insert,
         ClassToUpdatePhoneByTrigger.updatephone(trigger.new);
         // we can add the phone.//
     }
+    
+    // Trigger For Restrict To Delete Account Record .
+    // if(trigger.isbefore && trigger.isdelete){
+    //     classToRestrictAccountDeletion.method1(trigger.old);
+    // }
 
 }
