@@ -1,0 +1,46 @@
+<template>
+    <!-- First Card -->
+        <lightning-card title="Spinner Demo">
+            <P>Spinner 1</P>
+            <br/>
+            <lightning-button label="Show Spinner" variant="success" name ="showone" onclick={handleonclick}></lightning-button>
+                    <template if:true={showone}>
+                        <c-spinner-Lodder
+                            spinner-text = 'Featching Data From Server'
+                            variant="Base"
+                            size="Small">
+                        </c-spinner-Lodder>
+                    </template>
+        </lightning-card>
+    <!-- First Card -->
+<!-- /////////////////////////////////////////////////////// -->
+    <!-- Second Card -->
+        <lightning-card title="Spinner Demo">
+            <P>Spinner 2</P>
+            <br/>
+            <lightning-button label="Show Spinner" variant="Brand" name ="showtwo" onclick={handleonclick}></lightning-button>
+                    <template if:true={showtwo}>
+                        <c-spinner-Lodder
+                            spinner-text = 'Loading....'
+                            variant="Brand"
+                            size="Medium">
+                        </c-spinner-Lodder>
+                    </template>
+        </lightning-card>
+     <!-- Second Card -->
+<!-- /////////////////////////////////////////////////////// -->
+     <!-- Third Card -->
+        <lightning-card title="Spinner Demo">
+            <P>Spinner 3</P>
+            <br/>
+            <lightning-button label="Show Spinner" variant="destructive" name ="showthree" onclick={handleonclick}></lightning-button>
+                    <template if:true={showthree}>
+                        <c-spinner-Lodder
+                            spinner-text = 'Wait......'
+                            variant="Inverse"
+                            size="Large">
+                        </c-spinner-Lodder>
+                    </template>
+        </lightning-card>
+     <!-- Third Card -->
+</template>

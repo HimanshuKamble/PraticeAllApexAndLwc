@@ -4,6 +4,7 @@ public without sharing class AccountTriggerHelper {
     }
     public void doTask1() {
         System.debug('Inside Task 1');
+        TestClass.method1(10);
     }
     public void doTask2() {
         System.debug('Inside Task 2');
