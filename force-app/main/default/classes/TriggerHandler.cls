@@ -1,5 +1,5 @@
 public interface TriggerHandler {
-    void beforeInsert(List<SObject> newRecords);
+    void beforeInsert(List<SObject> newRecords); 
     void beforeUpdate(List<SObject> oldRecords, List<SObject> newRecords, Map<ID, SObject> oldRecordMap, Map<ID, SObject> newRecordMap);
     void beforeDelete(List<SObject> oldRecords, Map<ID, SObject> oldRecordMap);
     void afterInsert(List<SObject> newRecords, Map<ID, SObject> newRecordMap);

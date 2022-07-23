@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Dynamic search">
+        <lightning-input type="text" style="width:20%;" label="Enter Contact Name" 
+                        value={conlastname} onchange={handleonchange}>
+        </lightning-input>
+
+        <!-- <lightning-card title="Show Data">
+            <template for:each={records} for:item="con">
+                Contact Name = {con.LastName}
+            </template>
+        </lightning-card> -->
+        
+    
+        <lightning-card title="Show Data IN Table">    
+       <table>
+        <tbody>
+            <template for:each={records} for:item="con">
+                <tr key={con.Id}>
+                    <td>{con.LastName}</td>
+                </tr>
+            </template>
+        </tbody>
+        </table>
+        </lightning-card>
+           
+
+    </lightning-card>
+
+</template>
