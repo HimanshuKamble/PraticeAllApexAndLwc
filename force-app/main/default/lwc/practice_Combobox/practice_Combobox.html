@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Combobox Demo">
+        <!-- Combobox Code Here -->
+        <lightning-combobox  label="Demo Created Account"
+                             value={values}
+                             placeholder="Select Demo Account List"
+                             options={options}
+                             onchange={handleonchange}>
+        </lightning-combobox>
+
+        <p>Selected Account Value is: {values}</p>
+    </lightning-card>
+</template>

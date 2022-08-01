@@ -1,0 +1,13 @@
+<template>
+    <template if:false={fileUploaded}>
+        <lightning-file-upload label=""
+                            name="fileUploader"
+                            accept={acceptedFileFormats}
+                            record-id={recordId}
+                            onuploadfinished={handleUploadFinished}>
+        </lightning-file-upload>
+    </template>
+    <template if:true={fileUploaded}>
+        No Action Required
+    </template>
+</template>

@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Parent Child Communication P-2">
+        <lightning-input type="text" label="Enter some text" placeholder="Enter Value here........" onchange={handleonchange}></lightning-input>
+        <div>
+            <p>Parent Counter is : {getcounterval}</p>
+        </div>
+        <c-childcmp1 counterval={getcounterval}></c-childcmp1>
+        <lightning-button variant="success" label="Add 1000 to Counter" 
+                          title="Successful action" onclick={handleClick} class="slds-m-left_x-small">
+        </lightning-button>
+        <lightning-button variant="base" label="AC" 
+                          title="Successful action" onclick={handleClickotAc} class="slds-m-left_x-small">
+        </lightning-button>
+    </lightning-card>
+</template>

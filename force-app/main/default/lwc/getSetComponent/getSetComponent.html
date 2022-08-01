@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Animal" class="Slds-m-around_small">
+        <br/>
+        <lightning-input label="Enter Original Age" value='0' onchange={upadateoriginalvalue} ></lightning-input>
+        <lightning-button   flebility="true"
+                            label="Add Age" variant="Brand" onclick={handleonaddagebtn}  
+                            icon-name="utility.account"></lightning-button>
+        <br/>
+        Name:- {name};
+        <br/>
+        Age:- {age} year;
+        <br/>
+    </lightning-card>
+</template>

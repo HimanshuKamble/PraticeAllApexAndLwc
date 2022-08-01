@@ -1,0 +1,16 @@
+<template>
+   <lightning-card title="Child To Parent Communication">
+        <div class="card slds-p-around_large">
+            Count is : {Counter}
+        </div>
+            <!--we can catch event from child we need to wright 'ON' in Front of event name passsing  from child
+                in that case pass add handle by add message as 'add' & substarct handlle As''subsract'. -->
+        <c-child-comp1
+            onadd={handleCounterAdd}
+            onsubstarct={handleCounterSubstact}
+            ongetzero={handleonAc}
+            onmultiply={handleCounterMultiply}>
+        </c-child-comp1>
+            <!-- upper comment End -->
+    </lightning-card>
+</template>

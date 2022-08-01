@@ -1,0 +1,51 @@
+<template>
+    <lightning-layout multiple-rows="true" class="slds-m-top_small">
+            <lightning-layout-item flexibility="auto">
+                <lightning-button variant="Brand"
+                                label="Add"
+                                title="Add"
+                                onclick={handleonadd}
+                                icon-name="utility:add">
+                </lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item flexibility="auto">
+                <lightning-button variant="Brand"
+                                label="AC"
+                                title="AC"
+                                data-factor="3"
+                                onclick={handletoAc}>
+                </lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item>
+                <lightning-button variant="Brand"
+                                label="Substarct"
+                                title="Substarct"
+                                onclick={handleonsubstract}
+                                icon-name="utility:dash">
+                </lightning-button>
+            </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout multiple-rows="true" class="slds-m-top_small">
+            <!-- Multiply Buttons start -->
+            <lightning-layout-item flexibility="auto">
+                <lightning-button variant="Brand"
+                                label="2"
+                                title="2"
+                                data-factor="2"
+                                onclick={handleonmultiply}
+                                icon-name="utility:close">
+                </lightning-button>
+            </lightning-layout-item>
+
+            <lightning-layout-item>
+                <lightning-button variant="Brand"
+                                label="3"
+                                title="3"
+                                data-factor="3"
+                                onclick={handleonmultiply}
+                                icon-name="utility:close">
+                </lightning-button>
+            </lightning-layout-item>
+            <!-- Multiply Buttons End -->
+    </lightning-layout>
+</template>
